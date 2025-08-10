@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ง้อแฟน 💖</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    scroll-behavior: smooth;
+  }
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+  }
+  .page1 { background: #ff99aa; }
+  .page2 { background: #ff6f91; }
+  .page3 { background: #d65db1; }
+  .page4 { background: #845ec2; }
+
+  a, button {
+    margin-top: 20px;
+    background: white;
+    color: #ff4d6d;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  a:hover, button:hover {
+    background: #ffe6ea;
+  }
+</style>
+</head>
+<body>
+
+<section class="page1">
+  <div>รู้มั้ยเวลาที่น้องยิ้ม น้องหัวเราะมันน่ารักมากเลยนะ มันทำให้โลกพี่้สดใสชึ้นมาเลยหละ</div>
+  <a href="#page2">เลื่อนไปต่อ ➡️</a>
+</section>
+
+<section class="page2" id="page2">
+  <div>นั่นเป็นเหตุผลที่ทำให้พี่อยากอยู่กับน้องไปนานๆ</div>
+  <a href="#page3">เลื่อนไปต่อ ➡️</a>
+</section>
+
+<section class="page3" id="page3">
+  <div>พี่ขอโทษจริงๆ พี่ไม่ได้ตั้งใจทำให้น้องเสียใจเลย 🥺</div>
+  <a href="#page4">เลื่อนไปต่อ ➡️</a>
+</section>
+
+<section class="page3" id="page3">
+  <div>กลับมาสดใสเหมือนเดิมเถอะนะ ❤️</div>
+  <a href="#page4">เลื่อนไปต่อ ➡️</a>
+</section>
+
+<section class="page4" id="page4">
+  <div id="finalText">หายงอนพี่นะ รักน้องที่สุดละ 😘</div>
+  <div style="margin-top: 20px;">
+    <button id="forgiveBtn" onclick="forgive()">หายแล้ว</button>
+    <button id="noBtn" onclick="makeForgiveBigger()">ไม่</button>
+  </div>
+</section>
+
+<script>
+  function forgive() {
+    document.getElementById("finalText").innerHTML = "เย้! ดีใจที่น้องหายงอนแล้ว ❤️😘";
+  }
+
+  function makeForgiveBigger() {
+    const forgiveBtn = document.getElementById("forgiveBtn");
+    let currentSize = forgiveBtn.style.transform.replace(/[^0-9.]/g, "") || 1;
+    if (!currentSize) currentSize = 1;
+    currentSize = parseFloat(currentSize) + 0.2;
+    forgiveBtn.style.transform = `scale(${currentSize})`;
+  }
+</script>
+
+</body>
+</html>
